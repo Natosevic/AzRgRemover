@@ -6,8 +6,8 @@ It might cause loss of data if used without care.
 
 ### About
 Simple PowerShell script for bulk removal of resource groups and resources.
-Provided a Subscription ID or name, and an optional filter, the script will set the Azure context, list all the resource groups matching the filter (all, of filter is not provided)
-and remove them upon confirmation.
+Provided a Subscription ID or name, and an optional filter, the script will set the Azure context, list all the resource groups matching the filter and remove them upon confirmation.
+If the filter is omitted, * will be used as default, matching all the resource groups in the subscription.
 
 
 ### Parameters:
