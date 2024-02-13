@@ -41,9 +41,11 @@ if ($confirmation -eq "n") {
 Write-Output "Deleting resources..."
 
 foreach ($rg in $resourceGroups) {
-    Write-Output "Deleting resource group $rg.ResourceGroupName"
-    Remove-AzResourceGroup $rg.ResourceGroupName -Force
+    $rgName = $rg.ResourceGroupName
+    Write-Output "Deleting resource group $rgName"
+    Remove-AzResourceGroup $rgName -Force | Out-Null
 }
 
+Write-Output "`r`n Done!"
 Exit 0
 
