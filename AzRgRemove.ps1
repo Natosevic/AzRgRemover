@@ -26,9 +26,9 @@ Write-Output "WARNING! Listed resource groups and all the contained resources wi
 Write-Output "This operation can't be undone."
 
 $confirmation = Read-Host -Prompt "Do you want to continue? [Y]es / [N]o"
-$alloweInput = "N", "Y"
+$allowedInput = "N", "Y"
 
-if ($confirmation -inotin $alloweInput) {
+if ($confirmation -inotin $allowedInput) {
     Write-Output "Invalid input. Exiting..."
     Exit
 }
